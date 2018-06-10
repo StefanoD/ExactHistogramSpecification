@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-@license: MIT
+@license: Apache License Version 2.0
 @author: Stefano Di Martino
 Exact histogram matching
 """
