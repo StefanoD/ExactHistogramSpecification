@@ -147,7 +147,7 @@ class ExactHistogramMatcher:
 
         # Sort back ordered by the flattened image index. The last column represents the index
         sorted_merged_images = sorted_merged_images[sorted_merged_images[:, -1].argsort()]
-        new_target_img = sorted_merged_images[:, 0].reshape(image.shape).astype(np.uint8)
+        new_target_img = sorted_merged_images[:, 0].reshape(image.shape)
 
         return new_target_img
 
