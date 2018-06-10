@@ -83,15 +83,13 @@ class ExactHistogramMatcher:
                  I. e. x[0] represents the first pixel and contains an array with k
                  averaged pixels where k are the number of used kernels.
         """
-        # If k kernels haven been used, then there are k averaged images
         kernels = ExactHistogramMatcher._kernel_mapping[number_kernels]
         averaged_images = ExactHistogramMatcher._get_averaged_images(img, kernels)
-        number_averaged_images = len(averaged_images)
         img_size = averaged_images[0].shape[0] * averaged_images[0].shape[1]
 
         # shape of averaged_images: (number averaged images, height, width).
         # Reshape in a way, that one row contains all averaged values of pixel in position (x, y)
-        reshaped_averaged_images = averaged_images.reshape((number_averaged_images, img_size))
+        reshaped_averaged_images = averaged_images.reshape((number_kernels, img_size))
         transposed_averaged_images = reshaped_averaged_images.transpose()
         return transposed_averaged_images
 
