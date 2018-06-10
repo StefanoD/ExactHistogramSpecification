@@ -95,9 +95,9 @@ class ExactHistogramMatcher:
 
     @staticmethod
     def sort_rows_lexicographically(matrix):
-        # Because lexsort in numpy sorts after the last column,
-        # then after the second last column etc., we have to rotate
-        # the matrix in order to sort after the first column,
+        # Because lexsort in numpy sorts after the last row,
+        # then after the second last row etc., we have to rotate
+        # the matrix in order to sort all rows after the first column,
         # and then after the second column etc.
 
         rotated_matrix = np.rot90(matrix)
