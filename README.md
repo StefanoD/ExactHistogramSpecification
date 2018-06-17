@@ -1,4 +1,4 @@
-# Exact Histogram Matching
+# Exact Histogram Specification
 This is a Python implementation of *Exact Histogram Specification* by *Dinu Coltuc et al.*
 
 In contrast to traditional histogram matching algorithms which only approximate a reference histogram,
